@@ -1,22 +1,28 @@
-new Vue({
-    el: '#vue-app',
-    data: {
-        health: 100,
-        ended: false,
-    },
-    methods: {
-        punch: function (params) {
-            this.health -= 10;
-            if(this.health <= 0){
-                this.ended = true;
-            }
-        },
-        restart: function (params) {
-            this.health = 100;
-            this.ended = false;
+Vue.component('greeting',{
+    template:`<p>{{name}}:给大家介绍一下我的好朋友
+                <button @click="changeName">换名</button></p>`,
+    data: function (){
+        return {
+            name: '鹿晗'
         }
     },
-    computed: {
+    methods: {
+        changeName: function (params) {
+            this.name = 'herry'
+        }
+    },
+})
 
+new Vue({
+    el: '#vue-app-one',
+    data: {
+        
+    }
+});
+
+new Vue({
+    el: '#vue-app-two',
+    data: {
+        
     }
 });
