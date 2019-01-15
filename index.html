@@ -9,10 +9,13 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <div id="canvas" @mousemove="updateXY">
-        <span>x:{{X}}</span>
-        <span>y:{{Y}}</span>
-        <span @mousemove.stop="">此处暂停</span>
+    <div id="canvas">
+        <button @click="num1++">Add to A</button>
+        <button @click="num2++">Add to B</button>
+        <p>A-{{num1+age}}</p>
+        <p>B-{{num2+age}}</p>
+        <p>Age + A = {{addToA}}</p>
+        <p>Age + B = {{addToB}}</p>
     </div>
     <script src="app.js"></script>
 </body>
