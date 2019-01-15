@@ -10,26 +10,19 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Looping through lists</h1>
-        <ul>
-            <li v-for="character in characters">{{ character }}</li>
-        </ul>
-        <ul>
-            <li v-for="(ninja, index) in ninjas">{{ index }} . {{ ninja.name }} - {{ ninja.age }}</li>
-        </ul>
-        <!-- <div v-for="(ninja, index) in ninjas">
-            <h3>{{ index }} . {{ ninja.name }}</h3>
-            <p>Age - {{ ninja.age }}</p>
-        </div> -->
-        <template v-for="ninja in ninjas">
-            <!-- <div v-for="(val, key) in ninja">
-                <p>{{key}} - {{ val }}</p>
-            </div> -->
-            <template v-for="(val, key) in ninja">
-                <p>{{key}} - {{ val }}</p>
-            </template>
-            <hr />
-        </template>
+        <!-- 图片     -->
+        <div id="bag" :class="{burst: ended}"></div>
+
+        <!-- 进度情况 -->
+        <div id="bag-health">
+            <div :style="{width: health + '%'}"></div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div id="controls">
+            <button @click="punch()" v-show="!ended">使劲敲</button>
+            <button @click="restart()">重新开始</button>
+        </div>
     </div>
 </body>
 <script src="app.js"></script>
