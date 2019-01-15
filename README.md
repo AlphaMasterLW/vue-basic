@@ -1,1 +1,3 @@
-# 小白系列课程代码
+# v-for之template
+
+#template可以嵌套
