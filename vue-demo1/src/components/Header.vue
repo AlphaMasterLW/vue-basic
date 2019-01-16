@@ -1,7 +1,8 @@
 <!-- 头部 -->
 <template>
     <header class="header">
-        <h1>{{title}}</h1>
+        <h1>{{titles}}</h1>
+        <button @click="changeTitle">改变</button>
     </header>
 </template>
 
@@ -12,7 +13,18 @@ export default {
         return {
             title: "VUe.js Demo"
         };
-    }
+    },
+    props:{
+        titles: {
+            type: String,
+            required: true
+        }
+    },
+    methods: {
+        changeTitle: function name(params) {
+            this.titles = '我被改变了'
+        }
+    },
 }
 
 </script>

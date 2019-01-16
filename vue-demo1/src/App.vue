@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <app-header/>
+    <app-header :titles="title"/>
+    <hello-world :len="users.length"></hello-world>
     <users :users="users"/>
-    <app-footer/>
+    <app-footer :titles="title"/>
   </div>
 </template>
+
+<!--
+  传值： string number boolean
+  传引用： array object
+-->
 
 <script>
 import Users from './components/Users'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
@@ -17,6 +24,7 @@ export default {
     "users": Users,
     "app-header": Header,
     "app-footer": Footer,
+    "hello-world": HelloWorld
   },
   data() {
     return {
@@ -30,7 +38,8 @@ export default {
                 {name: "herry",position: "web开发", show: false},
                 {name: "bucky",position: "python开发", show: false},
                 {name: "emily",position: "java开发", show: false},
-            ]
+            ],
+      title: '我是title'
     }
   },
 }

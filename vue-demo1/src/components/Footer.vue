@@ -2,6 +2,7 @@
 <template>
     <footer class="footer">
         <p>{{copyright}}</p>
+        <p>{{titles}}</p>
     </footer>
 </template>
 
@@ -12,7 +13,13 @@ export default {
         return {
             copyright: "copyright 2019 vue demo"
         };
-    }
+    },
+    props:{
+        titles: {
+            type: String,
+            required: true
+        }
+    },
 }
 
 </script>
