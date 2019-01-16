@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header :titles="title"/>
+    <app-header @titleChanged="updateTitle($event)" :titles="title"/>
     <hello-world :len="users.length"></hello-world>
     <users :users="users"/>
     <app-footer :titles="title"/>
@@ -40,6 +40,11 @@ export default {
                 {name: "emily",position: "java开发", show: false},
             ],
       title: '我是title'
+    }
+  },
+  methods: {
+    updateTitle: function name(title) {
+      this.title = title;
     }
   },
 }

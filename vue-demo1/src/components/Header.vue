@@ -22,7 +22,8 @@ export default {
     },
     methods: {
         changeTitle: function name(params) {
-            this.titles = '我被改变了'
+            // this.titles = '我被改变了'
+            this.$emit('titleChanged', "子向父传值")
         }
     },
 }
