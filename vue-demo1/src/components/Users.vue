@@ -12,19 +12,18 @@
 <script>
 export default {
     name: 'Users',
+    // props: ["users"],
+
+    // 以下是标准写法
+    props: {
+        users: {
+            type: Array,
+            required: true
+        },
+    },
     data () {
         return {
-            users: [
-                {name: "herry",position: "web开发", show: false},
-                {name: "bucky",position: "python开发", show: false},
-                {name: "emily",position: "java开发", show: false},
-                {name: "herry",position: "web开发", show: false},
-                {name: "bucky",position: "python开发", show: false},
-                {name: "emily",position: "java开发", show: false},
-                {name: "herry",position: "web开发", show: false},
-                {name: "bucky",position: "python开发", show: false},
-                {name: "emily",position: "java开发", show: false},
-            ]
+            
         }
     }
 }

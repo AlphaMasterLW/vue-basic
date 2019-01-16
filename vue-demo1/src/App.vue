@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-header/>
-    <users/>
+    <users :users="users"/>
     <app-footer/>
   </div>
 </template>
@@ -17,7 +17,22 @@ export default {
     "users": Users,
     "app-header": Header,
     "app-footer": Footer,
-  }
+  },
+  data() {
+    return {
+      users: [
+                {name: "herry",position: "web开发", show: false},
+                {name: "bucky",position: "python开发", show: false},
+                {name: "emily",position: "java开发", show: false},
+                {name: "herry",position: "web开发", show: false},
+                {name: "bucky",position: "python开发", show: false},
+                {name: "emily",position: "java开发", show: false},
+                {name: "herry",position: "web开发", show: false},
+                {name: "bucky",position: "python开发", show: false},
+                {name: "emily",position: "java开发", show: false},
+            ]
+    }
+  },
 }
 </script>
 
